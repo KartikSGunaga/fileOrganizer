@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5896c927-1303-4459-994c-e70ad0a23c48" name="Changes" comment="16Dec commits">
+    <list default="true" id="5896c927-1303-4459-994c-e70ad0a23c48" name="Changes" comment="17Dec commits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileOrganizer/FileOrganiser.py" beforeDir="false" afterPath="$PROJECT_DIR$/fileOrganizer/FileOrganiser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702696967220</updated>
       <workItem from="1702696979381" duration="15323000" />
-      <workItem from="1702778429891" duration="2525000" />
+      <workItem from="1702778429891" duration="2557000" />
     </task>
     <task id="LOCAL-00001" summary="16Dec commits">
       <option name="closed" value="true" />
@@ -99,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702749034087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="17Dec commits">
+      <option name="closed" value="true" />
+      <created>1702782556830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702782556830</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +114,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="16Dec commits" />
-    <option name="LAST_COMMIT_MESSAGE" value="16Dec commits" />
+    <MESSAGE value="17Dec commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="17Dec commits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
