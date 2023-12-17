@@ -8,8 +8,8 @@ class organizeFiles:
     def getCurrentDir(self):
         return os.getcwd()
 
-    def getFileList(self):
-        directoryPath = input("\nEnter the directory path: ")
+    def getFileList(self, directoryPath):
+        # directoryPath = input("\nEnter the directory path: ")
         allFiles = None
 
         try:
@@ -18,25 +18,28 @@ class organizeFiles:
 
         except FileNotFoundError:
             print(f"The specified directory '{directoryPath}' does not exist.")
+            return None
         except PermissionError:
             print(f"Permission error while trying to access '{directoryPath}'.")
+            return None
         except Exception as e:
             print(f"An error occurred: {e}")
+            return None
 
         print("File paths:", allFiles)  # Print the file paths
 
         return allFiles
 
-    def moveFile(self, allfiles):
+    def moveFile(self, sourceDir, allfiles):
         musicExtensions = ['.mp3', '.wav', '.wma', '.aac', '.flac', '.ogg', '.m4a', '.aiff', '.opus']
         pdfExtensions = ['.pdf']
-        imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.tiff', '.bmp', '.svg', '.psd', '.raw', '.eps']
+        imageExtensions = ['webp', '.jpg', '.jpeg', '.png', '.gif', '.tiff', '.bmp', '.svg', '.psd', '.raw', '.eps']
         appExtensions = ['.exe', '.pkg', '.app', '.msi', '.bin', '.dmg']
         archiveExtensions = ['.zip', '.rar', '.7z', '.tar', '.gz', '.bz2', '.xz', '.z']
         videoExtensions = ['.mp4', '.mov', '.flv', '.avi', '.wmv', '.mkv', '.webm', '.vob', '.m4v']
         officeExtensions = ['.docx', '.xlsx', '.pptx', '.pst', '.ost', '.msg', '.doc', '.xls', '.ppt']
 
-        sourceDir = input("\nEnter the source Directory path: ")
+        # sourceDir = input("\nEnter the source Directory path: ")
 
         destinationDirs = {
             "music": os.path.join(sourceDir, "music"),
@@ -100,12 +103,17 @@ class organizeFiles:
                 print(f"File {file} is not moved.")
                 continue
 
+
 def main():
     print("\nWelcome to the file organiser!")
     orgFile = organizeFiles()
+    directoryPath = input("Specify the directory path you wish to organize: ")
 
-    allFiles = orgFile.getFileList()
-    orgFile.moveFile(allFiles)
+    if orgFile.getFileList(directoryPath) is not None:
+        allFiles = orgFile.getFileList(directoryPath)
+        orgFile.moveFile(directoryPath, allFiles)
+    else:
+        print("\nError in accessing the file.")
 
 
 if __name__ == "__main__":
