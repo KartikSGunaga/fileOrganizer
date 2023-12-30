@@ -10,7 +10,7 @@ class organizeFiles:
 
     def getFileList(self, directoryPath):
         # directoryPath = input("\nEnter the directory path: ")
-        allFiles = None
+        # allFiles = None
 
         try:
             allFiles = [os.path.join(directoryPath, file) for file in os.listdir(directoryPath)
